@@ -1,0 +1,11 @@
+html, body
+{
+    height: 100%;
+}
+
+#content
+{
+    min-height: 997px;
+    width: 80%;
+    margin: auto;
+}
