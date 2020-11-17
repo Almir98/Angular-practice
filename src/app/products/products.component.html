@@ -1,13 +1,20 @@
 <div>
   <div>
+    <button (click)="showHide()" class="btn btn-primary">{{imageStatus ? 'Hide': 'Show'}} image</button>
     <button id="button" (click)="showDialog()" class="btn btn-primary">Show dialog</button>
   </div>
+
+  <div class="row">
+    <h3>Filter by: </h3>
+    <input type="text" class="form-control" [(ngModel)]="filter">
+  </div>
+  <h4><strong> Filtered by : {{filter}}</strong></h4>
 
   <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
-        <th>Image</th>
+        <th *ngIf="imageStatus">Image</th>
         <th>First name</th>
         <th>Last name</th>
         <th>Salary</th>
@@ -15,19 +22,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr td *ngFor="let item of data">
+      <tr td *ngFor="let item of filteredData ">
         <td>{{item.id}}</td>
-          <td>
+          <td *ngIf="imageStatus">
             <img class="image" src={{item.image}}>
           </td>
         <td>{{item.name}}</td>
         <td>{{item.last}}</td>
         <td>{{item.salary}}</td>
-
         <td>{{item.age}}</td>
-        <!-- <td [(ngModel)]="item.age"></td> -->
       </tr>
     </tbody>
   </table>
 </div>
-
