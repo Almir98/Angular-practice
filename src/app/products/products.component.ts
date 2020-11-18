@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Idummy } from '../_interfaces/Idummy';
 import { IInformation } from '../_interfaces/IInformation';
+import { InformationService } from '../_services/information.service';
 
 @Component({
   selector: 'app-products',
@@ -7,66 +9,31 @@ import { IInformation } from '../_interfaces/IInformation';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
+  
+  filteredData: IInformation[];
+  podaci: Idummy[] = [];
   listsFilter: string;
-
-  get listFilter(): string
-  {                                   // getter and setter
-    return this.listFilter;
-  }
-  set listFilter(value: string)
-  {
-    this.listFilter = value;
-    this.filteredData = this.filter ? this.performFilter(this.filter) : this.data;
-  }
-
-
-  constructor() {
-    this.filteredData = this.data;
-  }
-
   imageStatus = false;
   filter: string;
 
-  data: IInformation[] = [
-    {
-      id: 1,
-      image: '../../assets/images/test.png',
-      name: 'Almir',
-      last: 'Tihak',
-      salary: 10,
-      age: 18,
-    },
-    {
-      id: 2,
-      image: '../../assets/images/test.png',
-      name: 'Test',
-      last: 'Test',
-      salary: 20,
-      age: 99,
-    },
-    {
-      id: 3,
-      image: '../../assets/images/test.png',
-      name: 'Kemal',
-      last: 'Lutvica',
-      salary: 30,
-      age: 30,
-    },
-  ];
-
-
-  filteredData: IInformation[];
-
-  performFilter(filterby: string): any
+  constructor(private informationService: InformationService)
   {
-    filterby = filterby.toLocaleLowerCase();
-    return this.data.filter((prod: IInformation) => prod.name.toLocaleLowerCase().indexOf(filterby) !== -1);
+    this.filteredData = this.data;
   }
-
+ 
   ngOnInit(): void
   {
-    console.log(this.filteredData);
+    this.loadAll();
+  }
+
+  loadAll(): any
+  {
+     this.informationService.getAll().subscribe(local => {
+      this.podaci = local.data as Idummy[];
+      console.log(this.podaci);
+      console.log(local.data);
+
+    });
   }
 
   showHide(): void
@@ -79,7 +46,4 @@ export class ProductsComponent implements OnInit {
     console.log('da');
 
   }
-
-
-
 }

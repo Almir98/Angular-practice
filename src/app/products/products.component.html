@@ -4,33 +4,25 @@
     <button id="button" (click)="showDialog()" class="btn btn-primary">Show dialog</button>
   </div>
 
-  <div class="row">
-    <h3>Filter by: </h3>
-    <input type="text" class="form-control" [(ngModel)]="filter">
-  </div>
-  <h4><strong> Filtered by : {{filter}}</strong></h4>
-
   <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
-        <th *ngIf="imageStatus">Image</th>
         <th>First name</th>
-        <th>Last name</th>
         <th>Salary</th>
         <th>Age</th>
+        <th *ngIf="imageStatus">Image</th>
       </tr>
     </thead>
     <tbody>
-      <tr td *ngFor="let item of filteredData ">
+      <tr td *ngFor="let item of podaci">
         <td>{{item.id}}</td>
-          <td *ngIf="imageStatus">
-            <img class="image" src={{item.image}}>
-          </td>
-        <td>{{item.name}}</td>
-        <td>{{item.last}}</td>
-        <td>{{item.salary}}</td>
-        <td>{{item.age}}</td>
+        <td>{{item.employee_name}}</td>
+        <td>{{item.employee_salary}}</td>
+        <td>{{item.employee_age}}</td>
+        <td *ngIf="imageStatus">
+          <img class="image" src="../../assets/images/test.png">
+        </td>
       </tr>
     </tbody>
   </table>

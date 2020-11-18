@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IInformation } from '../_interfaces/IInformation';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Idummy } from '../_interfaces/Idummy';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +11,14 @@ import { IInformation } from '../_interfaces/IInformation';
 
 export class InformationService {
 
-constructor() { }
+url = environment.baseUrl;
+
+constructor(private http: HttpClient) { }
 
 
-getAll(): Observable<IInformation[]>
+getAll(): any
 {
-  return null;
+  return this.http.get(this.url);
 }
 
 

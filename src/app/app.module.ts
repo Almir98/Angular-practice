@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Angular materials
 import { MatSliderModule } from '@angular/material/slider';
@@ -24,8 +25,9 @@ import { NavComponent } from './Nav/Nav.component';
     BrowserAnimationsModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
