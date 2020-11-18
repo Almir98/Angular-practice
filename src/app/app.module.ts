@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 // Angular materials
 import { MatSliderModule } from '@angular/material/slider';
@@ -12,12 +14,18 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { NavComponent } from './Nav/Nav.component';
+import { ProductDetailComponent } from '../app/products/productDetail/productDetail.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { appRoutes } from './routes';
+
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       ProductsComponent,
-      NavComponent
+      NavComponent,
+      ProductDetailComponent,
+      WelcomeComponent
    ],
   imports: [
     BrowserModule,
@@ -26,7 +34,8 @@ import { NavComponent } from './Nav/Nav.component';
     BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
 
   ],
   providers: [],

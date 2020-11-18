@@ -18,7 +18,6 @@ export class ProductsComponent implements OnInit {
 
   constructor(private informationService: InformationService)
   {
-    this.filteredData = this.data;
   }
  
   ngOnInit(): void
@@ -30,9 +29,6 @@ export class ProductsComponent implements OnInit {
   {
      this.informationService.getAll().subscribe(local => {
       this.podaci = local.data as Idummy[];
-      console.log(this.podaci);
-      console.log(local.data);
-
     });
   }
 
