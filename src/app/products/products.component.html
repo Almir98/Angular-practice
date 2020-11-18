@@ -12,16 +12,21 @@
         <th>Salary</th>
         <th>Age</th>
         <th *ngIf="imageStatus">Image</th>
+        <th>Details</th>
+
       </tr>
     </thead>
     <tbody>
       <tr td *ngFor="let item of podaci">
         <td>{{item.id}}</td>
         <td>{{item.employee_name}}</td>
-        <td>{{item.employee_salary}}</td>
+        <td>{{item.employee_salary}} $</td>
         <td>{{item.employee_age}}</td>
         <td *ngIf="imageStatus">
           <img class="image" src="../../assets/images/test.png">
+        </td>
+        <td>
+          <a [routerLink]="['/employeeDetail',item.id]" routerLinkActive="router-link-active" >Details</a>
         </td>
       </tr>
     </tbody>

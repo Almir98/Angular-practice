@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PassThrough } from 'stream';
 import { Employee } from '../_models/Employee';
+import { AlertifyService } from '../_services/alertify.service';
 import { InformationService } from '../_services/information.service';
 
 @Component({
@@ -11,19 +13,22 @@ export class EmployeeFormComponent implements OnInit {
 
   employee: Employee = new Employee();
 
-  constructor(private informationService: InformationService) { }
+  constructor(private informationService: InformationService,private alertify: AlertifyService) { }
 
   ngOnInit() {
   }
 
   addEmployee()
   {
-    console.log(this.employee);
+    this.informationService.insert(this.employee).subscribe((obj: Employee)=>{
+
+      this.employee=obj;
+      console.log(this.employee);
+    },error =>{
+
+      this.alertify.error("Something went wrong");
+    })
     
-    // this.informationService.insert((obj: Employee) =>{
-      
-    //    this.employee=obj; 
-    //  })
 
   }
 

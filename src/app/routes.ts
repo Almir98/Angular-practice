@@ -10,7 +10,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 export const appRoutes: Routes = [
 
     {path: 'home', component: WelcomeComponent},
-    {path: 'products', component: ProductsComponent},
+    {path: 'employee', component: ProductsComponent},
+    {path: 'employeeDetail/:id', component: ProductDetailComponent},
     {path: 'newEmployee', component: EmployeeFormComponent},
     {path: 'about', component: AboutComponent},
 

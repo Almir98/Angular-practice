@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AlertifyService } from '../app/_services/alertify.service';
+
 
 
 // Angular materials
@@ -39,10 +41,13 @@ import { AboutComponent } from './about/about.component';
     MatSliderModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    
+  ],
+  providers: [
+    AlertifyService
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
