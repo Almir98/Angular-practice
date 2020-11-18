@@ -1,7 +1,7 @@
 <div>
   <div>
     <button (click)="showHide()" class="btn btn-primary">{{imageStatus ? 'Hide': 'Show'}} image</button>
-    <button id="button" (click)="showDialog()" class="btn btn-primary">Show dialog</button>
+    <button (click)="showDialog()" class="btn btn-primary" id="button">Show dialog</button>
   </div>
 
   <table class="table table-striped">
@@ -27,3 +27,4 @@
     </tbody>
   </table>
 </div>
+<button class="btn btn-primary" [routerLink]="['/newEmployee']" id="btn"><i class="fa fa-user-plus"></i> Add new</button>

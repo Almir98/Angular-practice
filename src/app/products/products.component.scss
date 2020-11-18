@@ -1,7 +1,8 @@
-.image{
+div img{
     width: 60px;
     height: 60px;
     background-size: cover;
+    margin-left: 200px;
 }
 
 button{
@@ -9,7 +10,7 @@ button{
 }
 
 #button{
-    margin-left: 85%;
+    margin-left: 78%;
     margin-top: 1%;
     margin-bottom: 1%;
 }
@@ -21,4 +22,10 @@ button{
 input{
     width: 20%;
     margin-left: 25px;
+}
+
+#btn{
+    margin-left: 85%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }

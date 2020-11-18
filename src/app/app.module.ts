@@ -17,15 +17,19 @@ import { NavComponent } from './Nav/Nav.component';
 import { ProductDetailComponent } from '../app/products/productDetail/productDetail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { appRoutes } from './routes';
+import { EmployeeFormComponent } from './employeeForm/employeeForm.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [					
     AppComponent,
       ProductsComponent,
       NavComponent,
       ProductDetailComponent,
-      WelcomeComponent
+      WelcomeComponent,
+      EmployeeFormComponent,
+      AboutComponent
    ],
   imports: [
     BrowserModule,
