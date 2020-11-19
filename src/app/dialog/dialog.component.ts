@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { DialogDetailsComponent } from './dialogDetails/dialogDetails.component';
 
 @Component({
   selector: 'app-dialog',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class DialogComponent implements OnInit {
 
-  constructor(private router: Router,public dialogRef: MatDialogRef<DialogComponent>) { }
+  constructor(private router: Router,public dialogRef: MatDialogRef<DialogComponent>, public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -17,13 +18,12 @@ export class DialogComponent implements OnInit {
   onNoClick()
   {
     this.dialogRef.close();
-    this.router.navigate(['/employee']);
   }
 
   onYesClick()
   {
-    this.dialogRef.close();
-    this.router.navigate(['/dialogDetails']);
+    this.router.navigate(['/dialogDetails'])
+    this.dialog.closeAll();
   }
 
 

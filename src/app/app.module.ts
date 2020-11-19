@@ -13,9 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
 
-
-
-
 // Components
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';

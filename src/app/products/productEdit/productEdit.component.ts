@@ -30,11 +30,11 @@ export class ProductEditComponent implements OnInit {
 
   editEmployee()
   {
+    console.log(this.employee); 
     
     this.infoService.update(this.employee.id,this.employee).subscribe((emp : Employee) =>{
       
       this.employee = emp as Employee;
-      console.log(this.employee); 
     })
   }
 
