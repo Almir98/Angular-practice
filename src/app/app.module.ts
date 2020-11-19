@@ -5,8 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { AlertifyService } from '../app/_services/alertify.service';
-
 
 
 // Angular materials
@@ -45,7 +43,6 @@ import { AboutComponent } from './about/about.component';
     
   ],
   providers: [
-    AlertifyService
 
   ],
   bootstrap: [AppComponent]

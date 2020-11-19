@@ -13,7 +13,6 @@
         <th>Age</th>
         <th *ngIf="imageStatus">Image</th>
         <th>Details</th>
-
       </tr>
     </thead>
     <tbody>
@@ -26,7 +25,9 @@
           <img class="image" src="../../assets/images/test.png">
         </td>
         <td>
-          <a [routerLink]="['/employeeDetail',item.id]" routerLinkActive="router-link-active" >Details</a>
+          <button class="btn btn-warning">
+            <a [routerLink]="['/employeeDetail',item.id]" routerLinkActive="router-link-active" >Details</a>
+          </button>
         </td>
       </tr>
     </tbody>

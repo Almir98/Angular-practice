@@ -15,7 +15,6 @@ export const appRoutes: Routes = [
     {path: 'newEmployee', component: EmployeeFormComponent},
     {path: 'about', component: AboutComponent},
 
-    //{path: 'productsDetails/:id', component: ProductDetailComponent},
 
     {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
 ]

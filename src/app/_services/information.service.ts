@@ -13,6 +13,7 @@ export class InformationService {
 
 geturl = environment.baseUrl;
 postUrl= environment.postUrl;
+Idurl = environment.getId;
 
 constructor(private http: HttpClient) { }
 
@@ -26,6 +27,10 @@ insert(obj: Employee): any
   return this.http.post(this.postUrl,obj);
 }
 
+getById(id: number)
+{
+  return this.http.get(this.Idurl+id);
+}
 
 
 }

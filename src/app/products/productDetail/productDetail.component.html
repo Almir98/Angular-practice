@@ -1,7 +1,17 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 25rem;">
   <img class="card-img-top" src="../../../assets/images/test.png" alt="Card image cap">
   <div class="card-body">
-    <!-- <h5 class="card-title">{{podaci?.employee_name}}</h5> -->
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h1 class="card-title">{{employee.employee_name}}</h1> 
+
+    <strong><span>Id</span></strong>
+      <h3 class="card-title">{{employee.id}}</h3> 
+
+    <strong><span>Salary</span></strong>
+    <h3 class="card-title">{{employee.employee_salary}} $</h3> 
+
+    <strong><span>Age</span></strong>
+    <h3 class="card-title">{{employee.employee_age}}</h3> 
   </div>
 </div>
+
+<button class="btn btn-info" [routerLink]="['/employee']">Back</button>
