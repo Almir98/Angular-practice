@@ -19,7 +19,6 @@ export class ProductEditComponent implements OnInit {
     this.loadInfo();
   }
 
-
   loadInfo()
   {
     this.infoService.getById(+ this.route.snapshot.params['id']).subscribe((info: Employee) =>{

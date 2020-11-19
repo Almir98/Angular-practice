@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { WelcomeComponent } from '../welcome/welcome.component';
+import { DialogComponent } from '../dialog/dialog.component';
 import { Idummy } from '../_interfaces/Idummy';
 import { IInformation } from '../_interfaces/IInformation';
 import { InformationService } from '../_services/information.service';
@@ -44,12 +44,6 @@ export class ProductsComponent implements OnInit {
 
   showDialog(): void
   {
-    const dialogRef = this.dialog.open(WelcomeComponent);
-
-
-    console.log('da');
-
-    
-
+    const dialogRef = this.dialog.open(DialogComponent);
   }
 }

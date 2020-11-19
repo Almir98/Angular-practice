@@ -26,10 +26,12 @@ import { appRoutes } from './routes';
 import { EmployeeFormComponent } from './employeeForm/employeeForm.component';
 import { AboutComponent } from './about/about.component';
 import { ProductEditComponent } from './products/productEdit/productEdit.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { DialogDetailsComponent } from './dialog/dialogDetails/dialogDetails.component';
 
-
+DialogDetailsComponent
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
       ProductsComponent,
       NavComponent,
@@ -38,6 +40,8 @@ import { ProductEditComponent } from './products/productEdit/productEdit.compone
       EmployeeFormComponent,
       AboutComponent,
       ProductEditComponent,
+      DialogComponent,
+      DialogDetailsComponent
    ],
   imports: [
     BrowserModule,

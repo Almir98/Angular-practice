@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { DialogDetailsComponent } from './dialog/dialogDetails/dialogDetails.component';
 import { EmployeeFormComponent } from './employeeForm/employeeForm.component';
 
 
@@ -15,11 +16,12 @@ export const appRoutes: Routes = [
     {path: 'employeeDetail/:id', component: ProductDetailComponent},
     {path: 'newEmployee', component: EmployeeFormComponent},
     {path: 'about', component: AboutComponent},
+    {path: 'dialogDetails', component: DialogDetailsComponent},
 
     {path: 'employeeEdit/:id', component: ProductEditComponent},
 
 
-
+    
 
     {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
 ]
