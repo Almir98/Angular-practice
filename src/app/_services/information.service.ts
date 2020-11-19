@@ -14,6 +14,7 @@ export class InformationService {
 geturl = environment.baseUrl;
 postUrl= environment.postUrl;
 Idurl = environment.getId;
+puturl=environment.put;
 
 constructor(private http: HttpClient) { }
 
@@ -22,15 +23,19 @@ getAll(): any
   return this.http.get(this.geturl);
 }
 
-insert(obj: Employee): any
-{
-  return this.http.post(this.postUrl,obj);
-}
-
 getById(id: number)
 {
   return this.http.get(this.Idurl+id);
 }
 
+insert(obj: Employee): any
+{
+  return this.http.post(this.postUrl,obj);
+}
+
+update(id: number, employee: Employee)
+{
+  return this.http.put(this.puturl,employee);
+}
 
 }

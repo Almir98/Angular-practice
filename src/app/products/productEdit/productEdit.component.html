@@ -1,0 +1,19 @@
+<h1 id="h" class="card-title"><i class="fa fa-edit"></i> Emploeyee edit</h1> 
+
+
+<form #employeeEdit="ngForm" (ngSubmit)="editEmployee()" *ngIf="employee">
+  <div class="form-group col-md-7 mt-4">
+    <label>Employee name</label>
+    <input type="text" class="form-control" placeholder="{{employee.employee_name}}" name="employee.employee_name" [(ngModel)]="employee.employee_name" required >
+  </div>
+  <div class="form-group col-md-7 mt-4">
+    <label>Salary</label>
+    <input type="number" class="form-control" min="0" max="10000" placeholder="{{employee.employee_salary}}" name="employee.employee_salary" [(ngModel)]="employee.employee_salary" required >
+  </div>
+  <div class="form-group col-md-7 mt-4">
+    <label>Age</label>
+    <input type="number" class="form-control" min="0" max="130" placeholder="{{employee.employee_age}}" name="employee.employee_age" [(ngModel)]="employee.employee_age" required >
+  </div>
+  <button [disabled]="!employeeEdit.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+

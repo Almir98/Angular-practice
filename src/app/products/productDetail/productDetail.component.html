@@ -1,11 +1,12 @@
-<div class="card" style="width: 25rem;">
+<h1 id="h" class="card-title">Emploeyee details</h1> 
+
+<div class="card" *ngIf="employee" style="width: 25rem;">
   <img class="card-img-top" src="../../../assets/images/test.png" alt="Card image cap">
   <div class="card-body">
     <h1 class="card-title">{{employee.employee_name}}</h1> 
 
     <strong><span>Id</span></strong>
-      <h3 class="card-title">{{employee.id}}</h3> 
-
+    <h3 class="card-title">{{employee?.id}}</h3> 
     <strong><span>Salary</span></strong>
     <h3 class="card-title">{{employee.employee_salary}} $</h3> 
 
@@ -14,4 +15,7 @@
   </div>
 </div>
 
-<button class="btn btn-info" [routerLink]="['/employee']">Back</button>
+<br>
+<button class="btn btn-info" [routerLink]="['/employee']"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+<button id="btn" class="btn btn-primary" [routerLink]="['/employeeEdit',employee?.id]"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button>
+

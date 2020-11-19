@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   baseUrl: 'http://dummy.restapiexample.com/api/v1/employees',
   postUrl: 'http://dummy.restapiexample.com/api/v1/create',
-  getId: 'http://dummy.restapiexample.com/api/v1/employee/'
+  getId: 'http://dummy.restapiexample.com/api/v1/employee/',
+  put: 'http://dummy.restapiexample.com/public/api/v1/update/'
 };
 
 /*

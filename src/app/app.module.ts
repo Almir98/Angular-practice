@@ -19,6 +19,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { appRoutes } from './routes';
 import { EmployeeFormComponent } from './employeeForm/employeeForm.component';
 import { AboutComponent } from './about/about.component';
+import { ProductEditComponent } from './products/productEdit/productEdit.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AboutComponent } from './about/about.component';
       ProductDetailComponent,
       WelcomeComponent,
       EmployeeFormComponent,
-      AboutComponent
+      AboutComponent,
+      ProductEditComponent
    ],
   imports: [
     BrowserModule,
