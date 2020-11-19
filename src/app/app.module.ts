@@ -9,6 +9,12 @@ import { RouterModule } from '@angular/router';
 
 // Angular materials
 import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
+
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -23,7 +29,7 @@ import { ProductEditComponent } from './products/productEdit/productEdit.compone
 
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       ProductsComponent,
       NavComponent,
@@ -31,17 +37,20 @@ import { ProductEditComponent } from './products/productEdit/productEdit.compone
       WelcomeComponent,
       EmployeeFormComponent,
       AboutComponent,
-      ProductEditComponent
+      ProductEditComponent,
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    
+    // material
+    MatButtonModule,
+    MatDialogModule,
     
   ],
   providers: [
