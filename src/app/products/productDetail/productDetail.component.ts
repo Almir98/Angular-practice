@@ -22,7 +22,7 @@ export class ProductDetailComponent implements OnInit {
   employeeDetails()
   {
     this.informationService.getById(+ this.route.snapshot.params['id']).subscribe((emp: Employee) =>{
-      this.employee = emp.data as Employee;
+      this.employee = emp as Employee;
 
       console.log(this.employee);
     })

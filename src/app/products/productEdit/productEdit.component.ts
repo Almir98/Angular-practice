@@ -23,7 +23,7 @@ export class ProductEditComponent implements OnInit {
   {
     this.infoService.getById(+ this.route.snapshot.params['id']).subscribe((info: Employee) =>{
 
-      this.employee = info.data as Employee;
+      this.employee = info as Employee;
       
     })
   }

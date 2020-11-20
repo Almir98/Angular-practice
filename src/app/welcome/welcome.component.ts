@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, FormGroupDirective, Validators,FormsModule, NgForm, Validator} from '@angular/forms';
 
 @Component({
   selector: 'app-welcome',
@@ -11,5 +12,6 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }
